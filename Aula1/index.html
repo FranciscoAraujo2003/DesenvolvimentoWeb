@@ -10,6 +10,9 @@
 </head>
 <body>
     <link rel="stylesheet" href="styles.css">
+
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+
     <div class="container">
         <h1 class="title">Exercício de HTML e CSS</h1>
         <p class="text">Neste Exercício você vai praticar a criação de uma página com<br>cabeçalho, seções e cartões de conteúdo.</p>
@@ -19,20 +22,32 @@
 
     <div class="cards">
         <div class="card">
-            <h3>Titulo do Card</h3>
+            <h3>Aliens</h3>
             <img src="./Assets/alien.png" alt="alien">
         </div>
         <div class="card">
-            <h3>Titulo do Card</h3>
+            <h3>Invasores</h3>
             <img src="./Assets/space_invader.png" alt="spaceInvader">
         </div><div class="card">
-            <h3>Titulo do Card</h3>
+            <h3>Estrelas</h3>
             <img src="./Assets/star.png" alt="star">
         </div>
     </div>
 
     <p class="credits">© 2025 Arkade Academy</p>
     
+    <script>
+    const toggle = document.getElementById("darkModeToggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+
+      if (document.body.classList.contains("dark-mode")) {
+        toggle.textContent = "☀️ Light Mode";
+      } else {
+        toggle.textContent = "🌙 Dark Mode";
+      }
+    });
+   </script>
     
 </body>
 </html>
